@@ -4,8 +4,8 @@
   "description": "Plain-language answers about Indiana Medicaid and Hoosier Healthwise.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#0f172a",
-  "theme_color": "#0f172a",
+  "background_color": "#1a0000",
+  "theme_color": "#1a0000",
   "icons": [
     {
       "src": "/favicon.svg",
