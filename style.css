@@ -104,6 +104,7 @@ a {
   max-width: 720px;
   overflow-x: auto;
   scrollbar-width: none;
+  justify-content: center;
 }
 .site-nav ul::-webkit-scrollbar { display: none; }
 .site-nav li { flex-shrink: 0; }
