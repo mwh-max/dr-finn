@@ -1,4 +1,4 @@
-const CACHE = 'finn-v1';
+const CACHE = 'finn-v2';
 const CORE = [
   '/index.html',
   '/offline.html',
