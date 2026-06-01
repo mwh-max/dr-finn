@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 260" role="img" aria-label="Dr. FINN mascot — a Say's Firefly in a white lab coat">
+  <defs>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softglow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <radialGradient id="abdomenGrad" cx="50%" cy="45%" r="55%">
+      <stop offset="0%" stop-color="#ecfccb"/>
+      <stop offset="50%" stop-color="#a3e635"/>
+      <stop offset="100%" stop-color="#4d7c0f"/>
+    </radialGradient>
+    <radialGradient id="antennaGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#d9f99d"/>
+      <stop offset="100%" stop-color="#a3e635" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="wingGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#bae6fd" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#e0f2fe" stop-opacity="0.15"/>
+    </linearGradient>
+    <linearGradient id="coatGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Ambient abdomen glow behind body -->
+  <ellipse cx="100" cy="210" rx="38" ry="28" fill="#a3e635" opacity="0.12" filter="url(#glow)"/>
+
+  <!-- Upper wings -->
+  <ellipse cx="52" cy="118" rx="46" ry="17" fill="url(#wingGrad)" stroke="#7dd3fc" stroke-width="0.8" transform="rotate(-18 52 118)"/>
+  <ellipse cx="148" cy="118" rx="46" ry="17" fill="url(#wingGrad)" stroke="#7dd3fc" stroke-width="0.8" transform="rotate(18 148 118)"/>
+  <!-- Lower wings -->
+  <ellipse cx="58" cy="142" rx="32" ry="12" fill="url(#wingGrad)" stroke="#7dd3fc" stroke-width="0.7" transform="rotate(-8 58 142)"/>
+  <ellipse cx="142" cy="142" rx="32" ry="12" fill="url(#wingGrad)" stroke="#7dd3fc" stroke-width="0.7" transform="rotate(8 142 142)"/>
+
+  <!-- Lab coat body -->
+  <rect x="70" y="155" width="60" height="80" rx="14" fill="url(#coatGrad)"/>
+  <!-- Coat lapels -->
+  <path d="M 70 160 L 84 178 L 100 165 L 116 178 L 130 160" fill="url(#coatGrad)" stroke="#cbd5e1" stroke-width="1"/>
+  <!-- Coat center line -->
+  <line x1="100" y1="165" x2="100" y2="235" stroke="#cbd5e1" stroke-width="0.8"/>
+  <!-- Coat pocket -->
+  <rect x="113" y="185" width="13" height="15" rx="2" fill="none" stroke="#cbd5e1" stroke-width="1"/>
+  <!-- Pen in pocket -->
+  <line x1="117" y1="185" x2="116" y2="196" stroke="#94a3b8" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Coat bottom hem -->
+  <line x1="70" y1="228" x2="130" y2="228" stroke="#cbd5e1" stroke-width="0.8"/>
+
+  <!-- Thorax -->
+  <ellipse cx="100" cy="160" rx="28" ry="20" fill="#1c1917" stroke="#44403c" stroke-width="1.5"/>
+
+  <!-- Abdomen (glowing) -->
+  <ellipse cx="100" cy="205" rx="24" ry="22" fill="url(#abdomenGrad)" filter="url(#softglow)"/>
+  <!-- Abdomen segments -->
+  <path d="M 77 201 Q 100 198 123 201" stroke="#4d7c0f" stroke-width="0.9" fill="none" opacity="0.7"/>
+  <path d="M 77 209 Q 100 206 123 209" stroke="#4d7c0f" stroke-width="0.9" fill="none" opacity="0.7"/>
+  <path d="M 79 217 Q 100 214 121 217" stroke="#4d7c0f" stroke-width="0.9" fill="none" opacity="0.5"/>
+
+  <!-- Head -->
+  <circle cx="100" cy="108" r="32" fill="#1c1917" stroke="#44403c" stroke-width="1.5"/>
+
+  <!-- Antennae -->
+  <path d="M 87 79 Q 79 63 72 51" stroke="#57534e" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+  <circle cx="72" cy="50" r="6" fill="url(#antennaGlow)" filter="url(#glow)"/>
+  <circle cx="72" cy="50" r="3.5" fill="#d9f99d"/>
+  <path d="M 113 79 Q 121 63 128 51" stroke="#57534e" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+  <circle cx="128" cy="50" r="6" fill="url(#antennaGlow)" filter="url(#glow)"/>
+  <circle cx="128" cy="50" r="3.5" fill="#d9f99d"/>
+
+  <!-- Eyes — white sclera -->
+  <circle cx="88" cy="108" r="12" fill="white"/>
+  <circle cx="112" cy="108" r="12" fill="white"/>
+  <!-- Irises -->
+  <circle cx="90" cy="109" r="7.5" fill="#1d4ed8"/>
+  <circle cx="114" cy="109" r="7.5" fill="#1d4ed8"/>
+  <!-- Pupils -->
+  <circle cx="90" cy="109" r="4" fill="#0f172a"/>
+  <circle cx="114" cy="109" r="4" fill="#0f172a"/>
+  <!-- Eye highlights -->
+  <circle cx="92.5" cy="106" r="2.2" fill="white"/>
+  <circle cx="116.5" cy="106" r="2.2" fill="white"/>
+
+  <!-- Smile -->
+  <path d="M 89 122 Q 100 131 111 122" stroke="#78716c" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+  <!-- Stethoscope -->
+  <path d="M 86 152 C 80 162 80 174 87 180 C 92 185 100 184 100 180" stroke="#94a3b8" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <circle cx="100" cy="179" r="4.5" fill="#64748b"/>
+  <line x1="86" y1="152" x2="82" y2="144" stroke="#94a3b8" stroke-width="2" stroke-linecap="round"/>
+  <line x1="82" y1="144" x2="80" y2="138" stroke="#94a3b8" stroke-width="1.5" stroke-linecap="round"/>
+</svg>
