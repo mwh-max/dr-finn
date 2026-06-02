@@ -209,7 +209,7 @@ function showResults() {
   container.innerHTML = `
     <div class="card">
       <h2>You may qualify for:</h2>
-      <p style="color:var(--muted); font-size:13px;">This is an estimate only — not a decision. Apply at <a href="https://gateway.in.gov" target="_blank" rel="noopener">gateway.in.gov</a> or call <strong>800-403-0864</strong> to find out for sure.</p>
+      <p style="color:var(--muted); font-size:13px;">This is an estimate only — not a decision. Call <strong>800-403-0864</strong> or visit a DFR office to find out for sure.</p>
     </div>
     <div class="grid" style="margin-top:0;">${cards}</div>
     <div style="margin-top:12px; text-align:center;">
