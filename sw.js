@@ -1,11 +1,11 @@
-const CACHE = 'finn-v2';
+const CACHE = 'finn-v3';
 const CORE = [
   '/index.html',
   '/offline.html',
   '/style.css',
   '/app.js',
   '/favicon.svg',
-  '/dr-finn.svg',
+  '/dr-finn.png',
   '/who-qualifies.html',
   '/eligibility-check.html',
   '/eligibility.js',
