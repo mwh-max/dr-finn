@@ -40,7 +40,11 @@ const CORE = [
 
 self.addEventListener('install', e => {
   self.skipWaiting();
-  e.waitUntil(caches.open(CACHE).then(c => c.addAll(CORE)));
+  e.waitUntil(
+    caches.open(CACHE).then(c =>
+      Promise.all(CORE.map(url => c.add(url).catch(() => {})))
+    )
+  );
 });
 
 self.addEventListener('activate', e => {
@@ -63,7 +67,8 @@ self.addEventListener('fetch', e => {
           return res;
         })
         .catch(() => {
-          if (e.request.headers.get('accept').includes('text/html')) {
+          const accept = e.request.headers.get('accept') || '';
+          if (accept.includes('text/html')) {
             return caches.match('/offline.html');
           }
         });
